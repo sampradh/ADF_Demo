@@ -1,0 +1,126 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "ADFsame"
+		},
+		"AzureBlobStorageLinked_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorageLinked'"
+		},
+		"AzureSqlDatabaseLinked_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabaseLinked'"
+		},
+		"LinkCosmosDb1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LinkCosmosDb1'"
+		},
+		"On Premise_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'On Premise'"
+		},
+		"OnPremiseSqlServer_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'OnPremiseSqlServer'"
+		},
+		"OnPremiseSqlServer_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'OnPremiseSqlServer'"
+		},
+		"SqlServer1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SqlServer1'"
+		},
+		"SqlServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer1'"
+		},
+		"On Premise_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "C:\\Users\\Samir\\Desktop"
+		},
+		"On Premise_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "samir"
+		},
+		"OnPremiseSqlServer_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Samir"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "Samir"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ADFsame_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorageLinked_connectionString": {
+						"value": "[parameters('AzureBlobStorageLinked_connectionString')]"
+					},
+					"AzureSqlDatabaseLinked_connectionString": {
+						"value": "[parameters('AzureSqlDatabaseLinked_connectionString')]"
+					},
+					"LinkCosmosDb1_connectionString": {
+						"value": "[parameters('LinkCosmosDb1_connectionString')]"
+					},
+					"On Premise_password": {
+						"value": "[parameters('On Premise_password')]"
+					},
+					"OnPremiseSqlServer_connectionString": {
+						"value": "[parameters('OnPremiseSqlServer_connectionString')]"
+					},
+					"OnPremiseSqlServer_password": {
+						"value": "[parameters('OnPremiseSqlServer_password')]"
+					},
+					"SqlServer1_connectionString": {
+						"value": "[parameters('SqlServer1_connectionString')]"
+					},
+					"SqlServer1_password": {
+						"value": "[parameters('SqlServer1_password')]"
+					},
+					"On Premise_properties_typeProperties_host": {
+						"value": "[parameters('On Premise_properties_typeProperties_host')]"
+					},
+					"On Premise_properties_typeProperties_userId": {
+						"value": "[parameters('On Premise_properties_typeProperties_userId')]"
+					},
+					"OnPremiseSqlServer_properties_typeProperties_userName": {
+						"value": "[parameters('OnPremiseSqlServer_properties_typeProperties_userName')]"
+					},
+					"SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

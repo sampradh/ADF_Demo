@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADFsame"
+		},
+		"AzureBlobStorageLinked_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLinked_connectionString": {
+			"value": ""
+		},
+		"LinkCosmosDb1_connectionString": {
+			"value": ""
+		},
+		"On Premise_password": {
+			"value": ""
+		},
+		"OnPremiseSqlServer_connectionString": {
+			"value": ""
+		},
+		"OnPremiseSqlServer_password": {
+			"value": ""
+		},
+		"SqlServer1_connectionString": {
+			"value": ""
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"On Premise_properties_typeProperties_host": {
+			"value": "C:\\Users\\Samir\\Desktop"
+		},
+		"On Premise_properties_typeProperties_userId": {
+			"value": "samir"
+		},
+		"OnPremiseSqlServer_properties_typeProperties_userName": {
+			"value": "Samir"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "Samir"
+		}
+	}
+}
