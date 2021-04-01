@@ -1,0 +1,9 @@
+{
+	"name": "ADFsame",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7e24d705-34f7-462f-898a-77c7e4c13a2c",
+		"tenantId": "2633b1fb-73db-4f9a-a7f2-ff420601234d"
+	}
+}

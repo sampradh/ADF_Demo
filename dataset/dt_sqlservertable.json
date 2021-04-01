@@ -1,0 +1,39 @@
+{
+	"name": "dt_sqlservertable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "OnPremiseSqlServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "PersonID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LastName",
+				"type": "varchar"
+			},
+			{
+				"name": "FirstName",
+				"type": "varchar"
+			},
+			{
+				"name": "Address",
+				"type": "varchar"
+			},
+			{
+				"name": "City",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Test_Persons"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

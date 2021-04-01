@@ -1,0 +1,19 @@
+{
+	"name": "dt_emptxt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageLinked",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "output",
+				"container": "adf-demo"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

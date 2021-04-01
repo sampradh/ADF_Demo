@@ -1,0 +1,33 @@
+{
+	"name": "ScheduleTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_CopyBlob2Blob",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2021-03-24T08:05:00",
+				"endTime": "2021-03-27T08:05:00",
+				"timeZone": "India Standard Time",
+				"schedule": {
+					"minutes": [
+						15
+					],
+					"hours": [
+						8
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"name": "ds_onpremisefile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "On Premise",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "Adfprogress.txt"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

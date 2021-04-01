@@ -1,0 +1,7 @@
+{
+	"name": "IR-SelfHosted",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "To Connect ON premise database"
+	}
+}
